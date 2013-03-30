@@ -11,7 +11,7 @@ All classes are in the 'Source' folder with documentation in the 'Documentation'
 Documentation is in Doxygen format and outputed to HTML.
 You can find a brief description of the classes below.
 
-### CCButton
+### [CCButton](https://github.com/HurleyProg/Cocos2dUtilities/tree/master/Source/CCButton)
 This is a subclass of CCSprite which is to be used when a button is desired. 
 You can specify both a pressed and unpressed image. 
 These images will be changed automatically as the user interacts with the button.
