@@ -7,7 +7,8 @@ Feel free to use and modify the class to fit your needs.
 
 Classes
 ----------------
-All classes are in Source folder with documentation in the -- Documentation folder. 
+All classes are in the 'Source' folder with documentation in the 'Documentation' folder. 
+Documentation is in Doxygen format and outputed to HTML.
 You can find a brief description of the classes below.
 
 ### CCButton
