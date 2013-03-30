@@ -19,20 +19,19 @@
 #pragma mark - Node methods for use with cocos2d
 
 
-+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename target:(id)object method:(SEL)callback
++(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename target:(id)object function:(SEL)callback
 {
     return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:1.0 target:object method:callback] autorelease];
 }
 
 
-+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object method:(SEL)callback;
++(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object function:(SEL)callback;
 {
     return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:scale target:object method:callback] autorelease];
 }
 
 -(id)initWithWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object method:(SEL)callback
 {
-    //Use the parent constructor but store the strings for later use
     self = [super initWithFile:filename];
     if(self)
     {
@@ -68,13 +67,12 @@
 
 #pragma mark - Touch Methods
 
-//Checks if touch is within an extended touch area
 - (BOOL)containsTouchLocation:(UITouch *)touch
 {
-    //Translate into COCOA coordinates
+    //Translate into COCOA coordinates - Assumes that the parent is a layer and spans the whole screen (Untested with further nesting)
     CGPoint touchLocation = [self.parent convertTouchToNodeSpace:touch];
     
-    //Get the size of the sprite then create a new rect scaled appropriately (skip the scaling if set to 1.0)
+    //Only scale the boundingBox when touchRectScale not set to 1.0
     CGRect spriteArea = self.boundingBox;
     if (self.touchRectScale != 1.0)
     {
@@ -106,7 +104,6 @@
     //Always reset the sprite image
     [self setTexture:[[CCTextureCache sharedTextureCache] addImage:self.spriteFile]];
     
-    //If the touch didn't end in the sprite, return
     if(![self containsTouchLocation:touch])
         return;
     [self.target performSelector:self.selector withObject:self];
