@@ -21,3 +21,9 @@ The supplied selector is called on the object when the button is pressed.
 
 Optionally, the CCButton touch area can be scaled larger (or smaller) than the supplied images. 
 This is very useful when you want to increase the touch area of small images to make UX better.
+
+### [CCLoadingOverlay](https://github.com/HurleyProg/Cocos2dUtilities/tree/master/Source/CCLoadingOverlay)
+This is a subclass of CCLayer and is used when there are expensive calculations occurring that must happen syncronously.
+You must specify a font to use and can optionally specify a message to display. The default message is "Loading".
+
+![A picture of CCLoadingOverlay](https://github.com/HurleyProg/Cocos2dUtilities/blob/master/Source/Doxygen%20Static%20Pages/CCLoadingOverlay.png "CCloadingOverlay example")
