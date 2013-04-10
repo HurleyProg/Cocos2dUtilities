@@ -21,7 +21,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="hurleyprogdark.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Cocos2dUtilities
    </div>
@@ -84,6 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
 <a href="#pub-static-methods">Class Methods</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
@@ -103,6 +103,13 @@ Inheritance diagram for CCButton:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:a637e8c0fd3a9430bccf7602b3a656c5f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_c_c_button.html#a637e8c0fd3a9430bccf7602b3a656c5f">disable</a></td></tr>
+<tr class="separator:a637e8c0fd3a9430bccf7602b3a656c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92e757e2b6a24946c0e2618c8647d83"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_c_c_button.html#af92e757e2b6a24946c0e2618c8647d83">enable</a></td></tr>
+<tr class="separator:af92e757e2b6a24946c0e2618c8647d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:ad7254639659c7d1d9270ded1489f884a"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_c_c_button.html#ad7254639659c7d1d9270ded1489f884a">spriteWithFile:withPressedFile:target:function:</a></td></tr>
@@ -142,8 +149,40 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
 <tr class="separator:afc69f26255dacba7950a0c6d74c60181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A subclass of CCSprite which adds itself to the touch dispatcher. When touched it will call specified selector on the supplied target. Can also increase/decrease the touchable area which is helpful when making small images into buttons. </p>
+<div class="textblock"><p>A subclass of CCSprite which adds itself to the touch dispatcher. When touched it will call specified selector on the supplied target. Can also increase/decrease the touchable area which is helpful when making small images into buttons. This class has only been tested in landscape mode. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a637e8c0fd3a9430bccf7602b3a656c5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) disable </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Disables the button. Makes the button darker to look disabled </p>
+
+</div>
+</div>
+<a class="anchor" id="af92e757e2b6a24946c0e2618c8647d83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) enable </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enables the button. Removes the disabled look </p>
+
+</div>
+</div>
 <a class="anchor" id="ad7254639659c7d1d9270ded1489f884a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +218,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialzes the sprite and sets the sprite's touch area equal to the bounding box </p>
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    BOOL enabled</div>
+</div><!-- fragment --><p>Initialzes the sprite and sets the sprite's touch area equal to the bounding box </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>- The file to be used as the button's initial image. </td></tr>
@@ -189,6 +230,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>returns an autoreleased object for use with cocos2d objects </dd></dl>
 
 </div>
 </div>
@@ -244,6 +286,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>returns an autoreleased object for use with cocos2d objects </dd></dl>
 
 </div>
 </div>
@@ -354,13 +397,13 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Empous/libs/hurleyprog-cocosutilities/Source/CCButton/<a class="el" href="_c_c_button_8h_source.html">CCButton.h</a></li>
-<li>Empous/libs/hurleyprog-cocosutilities/Source/CCButton/CCButton.m</li>
+<li>Source/CCButton/<a class="el" href="_c_c_button_8h_source.html">CCButton.h</a></li>
+<li>Source/CCButton/CCButton.m</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 30 2013 15:43:23 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 9 2013 20:53:42 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -23,28 +23,11 @@
      The object which the selector will be called on
      */
     id<NSObject> _target;
-    
-    /**
-     The file to be used for the button
-     */
-    NSString* _spriteFile;
-    
-    /**
-     The file to be used when the button is being pressed/touched
-     */
-    NSString* _pressedSpriteFile;
-    
-    /**
-     The scale to use for the touch area. A value of '1.0' implies the touch area is equal to the button's bounding box.
-     */
-    float _touchRectScale;
+
 }
 
 @property (nonatomic, assign) id<NSObject> target;
-@property (nonatomic) SEL selector;
-@property (nonatomic, copy) NSString* spriteFile;
-@property (nonatomic, copy) NSString* pressedSpriteFile;
-@property (nonatomic, assign) float touchRectScale;
+@property (nonatomic, assign) SEL selector;
 
 /**
  Initialzes the sprite and sets the sprite's touch area equal to the bounding box
@@ -66,5 +49,14 @@
  @returns returns an autoreleased object for use with cocos2d objects
  */
 +(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object function:(SEL)callback;
+
+/**
+ Disables the button. Makes the button darker to look disabled */
+-(void)disable;
+
+/**
+ Enables the button. Removes the disabled look
+ */
+-(void)enable;
 
 @end

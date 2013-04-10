@@ -9,12 +9,31 @@
 #import "CCButton.h"
 
 @implementation CCButton
+{
+    /**
+     The file to be used for the button
+     */
+    NSString* _spriteFile;
+    
+    /**
+     The file to be used when the button is being pressed/touched
+     */
+    NSString* _pressedSpriteFile;
+    
+    /**
+     The scale to use for the touch area. A value of '1.0' implies the touch area is equal to the button's bounding box.
+     */
+    float _touchRectScale;
+    
+    /**
+     Tells the button whether it's enabled or not
+     */
+    BOOL enabled;
+    
+}
 
 @synthesize target = _target;
 @synthesize selector = _selector;
-@synthesize spriteFile = _spriteFile;
-@synthesize pressedSpriteFile = _pressedSpriteFile;
-@synthesize touchRectScale = _touchRectScale;
 
 #pragma mark - Node methods for use with cocos2d
 
@@ -35,11 +54,13 @@
     self = [super initWithFile:filename];
     if(self)
     {
-        self.target = object;
-        self.selector = callback;
-        self.spriteFile = filename;
-        self.pressedSpriteFile = pressedFilename;
-        self.touchRectScale = scale;
+        _target = object;
+        _selector = callback;
+        _spriteFile = [filename copy];
+        _pressedSpriteFile = [pressedFilename copy];
+        _touchRectScale = scale;
+        
+        enabled = YES;
     }
     return self;
 }
@@ -65,6 +86,26 @@
     [super onExit];
 }
 
+-(void)disable
+{
+    if(enabled == true)
+    {
+        [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
+        [self setColor:ccc3(102, 102, 102)];
+        enabled = NO;
+    }
+}
+
+-(void)enable
+{
+    if(enabled == false)
+    {
+        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+        [self setColor:ccc3(255,255,255)];
+        enabled = YES;
+    }
+}
+
 #pragma mark - Touch Methods
 
 - (BOOL)containsTouchLocation:(UITouch *)touch
@@ -74,18 +115,18 @@
     
     //Only scale the boundingBox when touchRectScale not set to 1.0
     CGRect spriteArea = self.boundingBox;
-    if (self.touchRectScale != 1.0)
+    if (_touchRectScale != 1.0)
     {
-        float newWidth = spriteArea.size.width * self.touchRectScale;
-        float newHeight = spriteArea.size.height * self.touchRectScale;
+        float newWidth = spriteArea.size.width * _touchRectScale;
+        float newHeight = spriteArea.size.height * _touchRectScale;
         
         float differenceInWidth = newWidth - spriteArea.size.width;
         float differenceInHeight = newHeight - spriteArea.size.height;
         
         spriteArea = CGRectMake(spriteArea.origin.x - (0.5 * differenceInWidth),
                               spriteArea.origin.y - (0.5 * differenceInHeight),
-                              spriteArea.size.width * self.touchRectScale,
-                              spriteArea.size.height * self.touchRectScale);
+                              spriteArea.size.width * _touchRectScale,
+                              spriteArea.size.height * _touchRectScale);
     }
     
     return CGRectContainsPoint(spriteArea, touchLocation);
@@ -95,18 +136,20 @@
     BOOL isSpriteTouched = [self containsTouchLocation:touch];
     if(isSpriteTouched)
     {
-        [self setTexture:[[CCTextureCache sharedTextureCache] addImage:self.pressedSpriteFile]];
+        [self setTexture:[[CCTextureCache sharedTextureCache] addImage:_pressedSpriteFile]];
     }
     return isSpriteTouched;
 }
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
     //Always reset the sprite image
-    [self setTexture:[[CCTextureCache sharedTextureCache] addImage:self.spriteFile]];
+    [self setTexture:[[CCTextureCache sharedTextureCache] addImage:_spriteFile]];
     
     if(![self containsTouchLocation:touch])
         return;
     [self.target performSelector:self.selector withObject:self];
 }
+
+
 
 @end
