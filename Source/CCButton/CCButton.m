@@ -28,7 +28,12 @@
     /**
      Tells the button whether it's enabled or not
      */
-    BOOL enabled;
+    BOOL _enabled;
+    
+    /**
+     Priority to be used with the touch dispatcher
+     */
+    int _priority;
     
 }
 
@@ -40,16 +45,21 @@
 
 +(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename target:(id)object function:(SEL)callback
 {
-    return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:1.0 target:object method:callback] autorelease];
+    return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:1.0 priority:0 target:object method:callback] autorelease];
 }
 
 
 +(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object function:(SEL)callback;
 {
-    return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:scale target:object method:callback] autorelease];
+    return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:scale priority:0 target:object method:callback] autorelease];
 }
 
--(id)initWithWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object method:(SEL)callback
++(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale priority:(int)priority target:(id)object function:(SEL)callback;
+{
+    return [[[self alloc]initWithWithFile:filename withPressedFile:pressedFilename touchAreaScale:scale priority:priority target:object method:callback] autorelease];
+}
+
+-(id)initWithWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale priority:(int)priority target:(id)object method:(SEL)callback
 {
     self = [super initWithFile:filename];
     if(self)
@@ -59,8 +69,8 @@
         _spriteFile = [filename copy];
         _pressedSpriteFile = [pressedFilename copy];
         _touchRectScale = scale;
-        
-        enabled = YES;
+        _enabled = YES;
+        _priority = priority;
     }
     return self;
 }
@@ -77,7 +87,7 @@
 - (void) onEnter
 {
     [super onEnter];
-    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:_priority swallowsTouches:YES];
 }
 
 - (void) onExit
@@ -88,21 +98,21 @@
 
 -(void)disable
 {
-    if(enabled == true)
+    if(_enabled == true)
     {
         [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
         [self setColor:ccc3(102, 102, 102)];
-        enabled = NO;
+        _enabled = NO;
     }
 }
 
 -(void)enable
 {
-    if(enabled == false)
+    if(_enabled == false)
     {
-        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:_priority swallowsTouches:YES];
         [self setColor:ccc3(255,255,255)];
-        enabled = YES;
+        _enabled = YES;
     }
 }
 

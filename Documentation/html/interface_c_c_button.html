@@ -116,6 +116,8 @@ Class Methods</h2></td></tr>
 <tr class="separator:ad7254639659c7d1d9270ded1489f884a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4bb554d9760f319ddc37de801250da9"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_c_c_button.html#ae4bb554d9760f319ddc37de801250da9">spriteWithFile:withPressedFile:touchAreaScale:target:function:</a></td></tr>
 <tr class="separator:ae4bb554d9760f319ddc37de801250da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c19897c04824ccc5e7ddd754084e94"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_c_c_button.html#a44c19897c04824ccc5e7ddd754084e94">spriteWithFile:withPressedFile:touchAreaScale:priority:target:function:</a></td></tr>
+<tr class="separator:a44c19897c04824ccc5e7ddd754084e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -123,12 +125,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a49828b78596c57fbc2ecfe0fe60f036e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bbad1f4f2cc816755628b6de570c96c"><td class="memItemLeft" align="right" valign="top">id&lt; NSObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_c_button.html#a3bbad1f4f2cc816755628b6de570c96c">_target</a></td></tr>
 <tr class="separator:a3bbad1f4f2cc816755628b6de570c96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42c8c4919799a054120f4f29e9858822"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_c_button.html#a42c8c4919799a054120f4f29e9858822">_spriteFile</a></td></tr>
-<tr class="separator:a42c8c4919799a054120f4f29e9858822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cbc51b1d6b042d8076078600ff52003"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_c_button.html#a9cbc51b1d6b042d8076078600ff52003">_pressedSpriteFile</a></td></tr>
-<tr class="separator:a9cbc51b1d6b042d8076078600ff52003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af18c7d416fbcac9eed5b43864e3ecd5a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_c_button.html#af18c7d416fbcac9eed5b43864e3ecd5a">_touchRectScale</a></td></tr>
-<tr class="separator:af18c7d416fbcac9eed5b43864e3ecd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -138,15 +134,6 @@ id&lt; NSObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>targe
 <tr class="memitem:a232c7461484e56543bc0a9b0aa7db573"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a232c7461484e56543bc0a9b0aa7db573"></a>
 SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
 <tr class="separator:a232c7461484e56543bc0a9b0aa7db573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a361bc8a13535abebd5ac7e1fbae73830"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a361bc8a13535abebd5ac7e1fbae73830"></a>
-NSString *&#160;</td><td class="memItemRight" valign="bottom"><b>spriteFile</b></td></tr>
-<tr class="separator:a361bc8a13535abebd5ac7e1fbae73830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e202645cacf68ed6d098804eb9ef3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0e202645cacf68ed6d098804eb9ef3f"></a>
-NSString *&#160;</td><td class="memItemRight" valign="bottom"><b>pressedSpriteFile</b></td></tr>
-<tr class="separator:af0e202645cacf68ed6d098804eb9ef3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc69f26255dacba7950a0c6d74c60181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc69f26255dacba7950a0c6d74c60181"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></td></tr>
-<tr class="separator:afc69f26255dacba7950a0c6d74c60181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A subclass of CCSprite which adds itself to the touch dispatcher. When touched it will call specified selector on the supplied target. Can also increase/decrease the touchable area which is helpful when making small images into buttons. This class has only been tested in landscape mode. </p>
@@ -218,13 +205,74 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    BOOL enabled</div>
-</div><!-- fragment --><p>Initialzes the sprite and sets the sprite's touch area equal to the bounding box </p>
+<p>Initialzes the sprite and sets the sprite's touch area equal to the bounding box </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>- The file to be used as the button's initial image. </td></tr>
     <tr><td class="paramname">pressedFilename</td><td>- The file to be used as the button's pressed image </td></tr>
+    <tr><td class="paramname">target</td><td>- The object that the selector will be called on </td></tr>
+    <tr><td class="paramname">callback</td><td>- The selector to be called on the target </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns an autoreleased object for use with cocos2d objects </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a44c19897c04824ccc5e7ddd754084e94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (id) spriteWithFile: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>filename</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withPressedFile:</td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>pressedFilename</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">touchAreaScale:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>scale</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">priority:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>priority</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">target:</td>
+          <td></td>
+          <td class="paramtype">(id)&#160;</td>
+          <td class="paramname"><em>object</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">function:</td>
+          <td></td>
+          <td class="paramtype">(SEL)&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialzes the sprite but allows the user to scale the touch area based on the bounding box of the button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>- The file to be used as the button's initial image. </td></tr>
+    <tr><td class="paramname">pressedFilename</td><td>- The file to be used as the button's pressed image </td></tr>
+    <tr><td class="paramname">scale</td><td>- Scales the touch area by the amount specified. A value of '1.0' makes the touch area the same size as the button bounding box. </td></tr>
+    <tr><td class="paramname">priority</td><td>- Sets the priority for the touch dispatcher otherwise defaults to 0 </td></tr>
     <tr><td class="paramname">target</td><td>- The object that the selector will be called on </td></tr>
     <tr><td class="paramname">callback</td><td>- The selector to be called on the target </td></tr>
   </table>
@@ -291,27 +339,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a9cbc51b1d6b042d8076078600ff52003"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (NSString*) _pressedSpriteFile</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The file to be used when the button is being pressed/touched </p>
-
-</div>
-</div>
 <a class="anchor" id="a49828b78596c57fbc2ecfe0fe60f036e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -330,27 +357,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
 </table>
 </div><div class="memdoc">
 <p>The selector to call when the button is pressed </p>
-
-</div>
-</div>
-<a class="anchor" id="a42c8c4919799a054120f4f29e9858822"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (NSString*) _spriteFile</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The file to be used for the button </p>
 
 </div>
 </div>
@@ -375,27 +381,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
 
 </div>
 </div>
-<a class="anchor" id="af18c7d416fbcac9eed5b43864e3ecd5a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (float) _touchRectScale</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The scale to use for the touch area. A value of '1.0' implies the touch area is equal to the button's bounding box. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Source/CCButton/<a class="el" href="_c_c_button_8h_source.html">CCButton.h</a></li>
 <li>Source/CCButton/CCButton.m</li>
@@ -403,7 +388,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>touchRectScale</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 9 2013 20:53:42 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 10 2013 18:59:34 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

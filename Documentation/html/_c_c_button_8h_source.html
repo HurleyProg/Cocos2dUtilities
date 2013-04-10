@@ -103,33 +103,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">SEL</span> <a class="code" href="interface_c_c_button.html#a49828b78596c57fbc2ecfe0fe60f036e">_selector</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="interface_c_c_button.html#a49828b78596c57fbc2ecfe0fe60f036e">   21</a></span>&#160;    </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    id&lt;NSObject&gt; <a class="code" href="interface_c_c_button.html#a3bbad1f4f2cc816755628b6de570c96c">_target</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="interface_c_c_button.html#a3bbad1f4f2cc816755628b6de570c96c">   26</a></span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    NSString* <a class="code" href="interface_c_c_button.html#a42c8c4919799a054120f4f29e9858822">_spriteFile</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="interface_c_c_button.html#a42c8c4919799a054120f4f29e9858822">   31</a></span>&#160;    </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    NSString* <a class="code" href="interface_c_c_button.html#a9cbc51b1d6b042d8076078600ff52003">_pressedSpriteFile</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="interface_c_c_button.html#a9cbc51b1d6b042d8076078600ff52003">   36</a></span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="interface_c_c_button.html#af18c7d416fbcac9eed5b43864e3ecd5a">_touchRectScale</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="interface_c_c_button.html#af18c7d416fbcac9eed5b43864e3ecd5a">   41</a></span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">@property</span> (nonatomic, assign) id&lt;NSObject&gt; target;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">@property</span> (nonatomic) <span class="keywordtype">SEL</span> selector;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">@property</span> (nonatomic, copy) NSString* spriteFile;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">@property</span> (nonatomic, copy) NSString* pressedSpriteFile;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">float</span> touchRectScale;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename target:(<span class="keywordtype">id</span>)object function:(<span class="keywordtype">SEL</span>)callback;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(<span class="keywordtype">float</span>)scale target:(<span class="keywordtype">id</span>)object function:(<span class="keywordtype">SEL</span>)callback;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;-(void)disable;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="interface_c_c_button.html#a3bbad1f4f2cc816755628b6de570c96c">   26</a></span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">@property</span> (nonatomic, assign) id&lt;NSObject&gt; target;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">@property</span> (nonatomic, assign) <span class="keywordtype">SEL</span> selector;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename target:(<span class="keywordtype">id</span>)object function:(<span class="keywordtype">SEL</span>)callback;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(<span class="keywordtype">float</span>)scale target:(<span class="keywordtype">id</span>)object function:(<span class="keywordtype">SEL</span>)callback;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;+(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(<span class="keywordtype">float</span>)scale priority:(<span class="keywordtype">int</span>)priority target:(<span class="keywordtype">id</span>)object function:(<span class="keywordtype">SEL</span>)callback;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;-(void)disable;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;-(void)enable;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;-(void)enable;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 9 2013 20:53:42 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 10 2013 18:59:34 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

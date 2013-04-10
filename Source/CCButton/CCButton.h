@@ -51,6 +51,18 @@
 +(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale target:(id)object function:(SEL)callback;
 
 /**
+ Initialzes the sprite but allows the user to scale the touch area based on the bounding box of the button.
+ @param filename - The file to be used as the button's initial image.
+ @param pressedFilename - The file to be used as the button's pressed image
+ @param scale - Scales the touch area by the amount specified. A value of '1.0' makes the touch area the same size as the button bounding box.
+ @param priority - Sets the priority for the touch dispatcher otherwise defaults to 0
+ @param target - The object that the selector will be called on
+ @param callback - The selector to be called on the target
+ @returns returns an autoreleased object for use with cocos2d objects
+ */
++(id)spriteWithFile:(NSString *)filename withPressedFile:(NSString*)pressedFilename touchAreaScale:(float)scale priority:(int)priority target:(id)object function:(SEL)callback;
+
+/**
  Disables the button. Makes the button darker to look disabled */
 -(void)disable;
 
