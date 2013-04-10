@@ -26,4 +26,4 @@ This is very useful when you want to increase the touch area of small images to 
 This is a subclass of CCLayer and is used when there are expensive calculations occurring that must happen syncronously.
 You must specify a font to use and can optionally specify a message to display. The default message is "Loading".
 
-![A picture of CCLoadingOverlay](https://github.com/HurleyProg/Cocos2dUtilities/blob/master/Source/Doxygen%20Static%20Pages/CCLoadingOverlay.png "CCloadingOverlay example")
+![A picture of CCLoadingOverlay](https://raw.github.com/HurleyProg/Cocos2dUtilities/master/Source/Doxygen%20Static%20Pages/CCLoadingOverlay.png "CCloadingOverlay example")
