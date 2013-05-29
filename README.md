@@ -27,3 +27,12 @@ This is a subclass of CCLayer and is used when there are expensive calculations 
 You must specify a font to use and can optionally specify a message to display. The default message is "Loading".
 
 ![A picture of CCLoadingOverlay](https://raw.github.com/HurleyProg/Cocos2dUtilities/master/Source/Doxygen%20Static%20Pages/CCLoadingOverlay.png "CCloadingOverlay example")
+
+###[CCFadableLayer](https://github.com/HurleyProg/Cocos2dUtilities/tree/master/Source/CCFadableLayer)
+This is a subclass of CCLayer that implements the CCRGBAProtocol, and allows you to pass the layer to a Fading animation.
+This will only work if all the children of the layer also obey the CCRGBAProtocol.
+
+###[CCTextFieldCentererScene](https://github.com/HurleyProg/Cocos2dUtilities/tree/master/Source/CCTextFieldCentererScene)
+This is a subclass of CCScene and is used to center to screen on any active UITextField that is a delegate of this class.
+You can either use this class directly as a scene or subclass it inorder to do more impressive interactions with UITextFields.
+For more information about this class see my [blog](http://www.hurleyprog.com/empous/using-and-centering-uitextfields-in-cocos2d/).
