@@ -2,8 +2,8 @@
 //  LoadingOverlay.m
 //  Empous
 //
-//  Created by Ryan Personal on 3/10/13.
-//  Copyright (c) 2013 Apple. All rights reserved.
+//  Created by Ryan Hurley on 3/10/13.
+//  Copyright (c) 2013 HurleyProg. All rights reserved.
 //
 
 #import "CCLoadingOverlay.h"

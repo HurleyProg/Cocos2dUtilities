@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -79,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,17 +97,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_target
 : <a class="el" href="interface_c_c_button.html#a3bbad1f4f2cc816755628b6de570c96c">CCButton</a>
 </li>
+<li>color
+: <a class="el" href="interface_c_c_fadable_layer.html#ab86c8a3c2d485c2ff813645416aa6a55">CCFadableLayer</a>
+</li>
 <li>disable
 : <a class="el" href="interface_c_c_button.html#a637e8c0fd3a9430bccf7602b3a656c5f">CCButton</a>
 </li>
 <li>enable
 : <a class="el" href="interface_c_c_button.html#af92e757e2b6a24946c0e2618c8647d83">CCButton</a>
 </li>
+<li>node
+: <a class="el" href="interface_c_c_fadable_layer.html#aa5fbc4d873ad1c209f39f8514fb81eb0">CCFadableLayer</a>
+</li>
 <li>nodeWithFont:
 : <a class="el" href="interface_c_c_loading_overlay.html#a38f0600a7f411f5abf5ed4559a88b89f">CCLoadingOverlay</a>
 </li>
 <li>nodeWithMessage:withFont:
 : <a class="el" href="interface_c_c_loading_overlay.html#a8bb2570b78b2f8c94f01256578e06b75">CCLoadingOverlay</a>
+</li>
+<li>opacity
+: <a class="el" href="interface_c_c_fadable_layer.html#a9b1cd262da615d2bb0fe2eff9bef270d">CCFadableLayer</a>
+</li>
+<li>selector
+: <a class="el" href="interface_c_c_button.html#a232c7461484e56543bc0a9b0aa7db573">CCButton</a>
+</li>
+<li>setColor:
+: <a class="el" href="interface_c_c_fadable_layer.html#a2f23f4946c0e2725dea9f8f6399eb171">CCFadableLayer</a>
+</li>
+<li>setOpacity:
+: <a class="el" href="interface_c_c_fadable_layer.html#a9ed648750c0dc7ef4425bb166b6c8128">CCFadableLayer</a>
 </li>
 <li>spriteWithFile:withPressedFile:target:function:
 : <a class="el" href="interface_c_c_button.html#ad7254639659c7d1d9270ded1489f884a">CCButton</a>
@@ -117,11 +136,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>spriteWithFile:withPressedFile:touchAreaScale:target:function:
 : <a class="el" href="interface_c_c_button.html#ae4bb554d9760f319ddc37de801250da9">CCButton</a>
 </li>
+<li>target
+: <a class="el" href="interface_c_c_button.html#a31fa28bf1129a91e3c3b1c7687c88117">CCButton</a>
+</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 10 2013 18:59:34 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 29 2013 15:15:02 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -3,7 +3,7 @@
 //  Empous
 //
 //  Created by Ryan Hurley on 3/26/13.
-//  Copyright (c) 2013 Apple. All rights reserved.
+//  Copyright (c) 2013 HurleyProg. All rights reserved.
 //
 
 #import "CCButton.h"

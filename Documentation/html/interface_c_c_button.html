@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,11 +128,9 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a31fa28bf1129a91e3c3b1c7687c88117"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31fa28bf1129a91e3c3b1c7687c88117"></a>
-id&lt; NSObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>target</b></td></tr>
+<tr class="memitem:a31fa28bf1129a91e3c3b1c7687c88117"><td class="memItemLeft" align="right" valign="top">id&lt; NSObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_c_button.html#a31fa28bf1129a91e3c3b1c7687c88117">target</a></td></tr>
 <tr class="separator:a31fa28bf1129a91e3c3b1c7687c88117"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a232c7461484e56543bc0a9b0aa7db573"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a232c7461484e56543bc0a9b0aa7db573"></a>
-SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
+<tr class="memitem:a232c7461484e56543bc0a9b0aa7db573"><td class="memItemLeft" align="right" valign="top">SEL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_c_button.html#a232c7461484e56543bc0a9b0aa7db573">selector</a></td></tr>
 <tr class="separator:a232c7461484e56543bc0a9b0aa7db573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -208,9 +206,9 @@ SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
 <p>Initialzes the sprite and sets the sprite's touch area equal to the bounding box </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>- The file to be used as the button's initial image. </td></tr>
+    <tr><td class="paramname">filename</td><td>- The file to use as the non-pressed image. </td></tr>
     <tr><td class="paramname">pressedFilename</td><td>- The file to be used as the button's pressed image </td></tr>
-    <tr><td class="paramname">target</td><td>- The object that the selector will be called on </td></tr>
+    <tr><td class="paramname">object</td><td>- The object that the selector will be called on </td></tr>
     <tr><td class="paramname">callback</td><td>- The selector to be called on the target </td></tr>
   </table>
   </dd>
@@ -269,11 +267,11 @@ SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
 <p>Initialzes the sprite but allows the user to scale the touch area based on the bounding box of the button. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>- The file to be used as the button's initial image. </td></tr>
+    <tr><td class="paramname">filename</td><td>- The file to use as the non-pressed image. </td></tr>
     <tr><td class="paramname">pressedFilename</td><td>- The file to be used as the button's pressed image </td></tr>
     <tr><td class="paramname">scale</td><td>- Scales the touch area by the amount specified. A value of '1.0' makes the touch area the same size as the button bounding box. </td></tr>
     <tr><td class="paramname">priority</td><td>- Sets the priority for the touch dispatcher otherwise defaults to 0 </td></tr>
-    <tr><td class="paramname">target</td><td>- The object that the selector will be called on </td></tr>
+    <tr><td class="paramname">object</td><td>- The object that the selector will be called on </td></tr>
     <tr><td class="paramname">callback</td><td>- The selector to be called on the target </td></tr>
   </table>
   </dd>
@@ -326,10 +324,10 @@ SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
 <p>Initialzes the sprite but allows the user to scale the touch area based on the bounding box of the button. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>- The file to be used as the button's initial image. </td></tr>
+    <tr><td class="paramname">filename</td><td>- The file to use as the non-pressed image. </td></tr>
     <tr><td class="paramname">pressedFilename</td><td>- The file to be used as the button's pressed image </td></tr>
     <tr><td class="paramname">scale</td><td>- Scales the touch area by the amount specified. A value of '1.0' makes the touch area the same size as the button bounding box. </td></tr>
-    <tr><td class="paramname">target</td><td>- The object that the selector will be called on </td></tr>
+    <tr><td class="paramname">object</td><td>- The object that the selector will be called on </td></tr>
     <tr><td class="paramname">callback</td><td>- The selector to be called on the target </td></tr>
   </table>
   </dd>
@@ -381,6 +379,49 @@ SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a232c7461484e56543bc0a9b0aa7db573"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (SEL) selector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The property for the selector variable </p>
+
+</div>
+</div>
+<a class="anchor" id="a31fa28bf1129a91e3c3b1c7687c88117"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id&lt;NSObject&gt;) target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The property for the target variable </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Source/CCButton/<a class="el" href="_c_c_button_8h_source.html">CCButton.h</a></li>
 <li>Source/CCButton/CCButton.m</li>
@@ -388,7 +429,7 @@ SEL&#160;</td><td class="memItemRight" valign="bottom"><b>selector</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 10 2013 18:59:34 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 29 2013 15:15:02 for Cocos2dUtilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

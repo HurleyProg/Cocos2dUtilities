@@ -3,7 +3,7 @@
 //  Empous
 //
 //  Created by Ryan Hurley on 3/26/13.
-//  Copyright (c) 2013 Apple. All rights reserved.
+//  Copyright (c) 2013 HurleyProg. All rights reserved.
 //
 
 #import "CCSprite.h"
@@ -26,14 +26,20 @@
 
 }
 
+/**
+ The property for the target variable
+ */
 @property (nonatomic, assign) id<NSObject> target;
+/**
+ The property for the selector variable
+ */
 @property (nonatomic, assign) SEL selector;
 
 /**
  Initialzes the sprite and sets the sprite's touch area equal to the bounding box
- @param filename - The file to be used as the button's initial image.
+ @param filename - The file to use as the non-pressed image.
  @param pressedFilename - The file to be used as the button's pressed image
- @param target - The object that the selector will be called on
+ @param object - The object that the selector will be called on
  @param callback - The selector to be called on the target
  @returns returns an autoreleased object for use with cocos2d objects
  */
@@ -41,10 +47,10 @@
 
 /**
  Initialzes the sprite but allows the user to scale the touch area based on the bounding box of the button.
- @param filename - The file to be used as the button's initial image.
+ @param filename - The file to use as the non-pressed image.
  @param pressedFilename - The file to be used as the button's pressed image
  @param scale - Scales the touch area by the amount specified. A value of '1.0' makes the touch area the same size as the button bounding box.
- @param target - The object that the selector will be called on
+ @param object - The object that the selector will be called on
  @param callback - The selector to be called on the target
  @returns returns an autoreleased object for use with cocos2d objects
  */
@@ -52,11 +58,11 @@
 
 /**
  Initialzes the sprite but allows the user to scale the touch area based on the bounding box of the button.
- @param filename - The file to be used as the button's initial image.
+ @param filename - The file to use as the non-pressed image.
  @param pressedFilename - The file to be used as the button's pressed image
  @param scale - Scales the touch area by the amount specified. A value of '1.0' makes the touch area the same size as the button bounding box.
  @param priority - Sets the priority for the touch dispatcher otherwise defaults to 0
- @param target - The object that the selector will be called on
+ @param object - The object that the selector will be called on
  @param callback - The selector to be called on the target
  @returns returns an autoreleased object for use with cocos2d objects
  */
